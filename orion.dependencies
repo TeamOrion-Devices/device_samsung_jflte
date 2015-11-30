@@ -1,0 +1,27 @@
+[
+  {
+    "repository": "AOSP-JF-MM/android_device_samsung_qcom-common",
+    "target_path": "device/samsung/qcom-common",
+    "branch": "aosp-6.0"
+  },
+  {
+    "repository": "AOSP-JF-MM/proprietary_vendor_samsung",
+    "target_path": "vendor/samsung",
+    "branch": "jf-unified-6.0"
+  },
+  {
+    "repository": "AOSP-JF-MM/android_hardware_samsung",
+    "target_path": "hardware/samsung",
+    "branch": "lp5.1"
+  },
+  {
+    "repository": "SlimRoms/device_samsung_jf-common",
+    "target_path": "device/samsung/jf-common",
+    "branch": "aosp-6.0-test"
+  },
+  {
+    "repository": "AOSP-JF-MM/android_kernel_samsung_jf",
+    "target_path": "kernel/samsung/jf",
+    "branch": "aosp-6.0-test"
+  }
+]
