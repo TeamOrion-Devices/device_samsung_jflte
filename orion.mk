@@ -24,8 +24,14 @@
 # Inherit from jflte device
 $(call inherit-product, device/samsung/jflte/full_jflte.mk)
 
+# Enhanced NFC
+$(call inherit-product, vendor/orion/config/nfc_enhanced.mk)
+
+# Inherit some common SLIM stuff.
+$(call inherit-product, vendor/orion/config/common_full_phone.mk)
+
 # Inherit our stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_jflte
+PRODUCT_NAME := orion_jflte
   
