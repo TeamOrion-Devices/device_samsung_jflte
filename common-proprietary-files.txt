@@ -111,12 +111,7 @@ etc/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw
 etc/firmware/vidc_1080p.fw:vendor/firmware/vidc_1080p.fw
 
 # GPS
-bin/loc_launcher
-lib/hw/gps.default.so
-lib/libgps.utils.so
 lib/libloc_api_v02.so
-lib/libloc_eng.so
-lib/libloc_core.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -133,27 +128,17 @@ etc/sec_config
 
 # Media
 bin/qseecomd
-lib/libDivxDrm.so
 lib/libdivxdrmdecrypt.so
 lib/libdrmdecrypt.so
 lib/libdrmfs.so
 lib/libdrmtime.so
-lib/libExtendedExtractor.so
 lib/libI420colorconvert.so
 lib/libmm-color-convertor.so
-lib/libmmosal.so
-lib/libmmparser.so
-lib/libSHIMDivxDrm.so
 lib/libQSEEComAPI.so
 
 # NFC firmware
 vendor/firmware/bcm2079xB4_firmware.ncd
 vendor/firmware/bcm2079xB4_pre_firmware.ncd
-
-# Postprocessing
-bin/mm-pp-daemon
-lib/libmm-abl.so
-lib/libmm-abl-oem.so
 
 # QMI
 lib/libidl.so

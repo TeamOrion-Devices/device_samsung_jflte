@@ -109,11 +109,16 @@ PRODUCT_PACKAGES += \
     libqdMetaData
 
 # Doze
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     SamsungDoze
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8960
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:/system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:/system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:/system/etc/sap.conf
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
@@ -171,7 +176,7 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libdashplayer \
+    libOmxCore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxEvrcEnc \
@@ -179,10 +184,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libOmxVenc \
     libOmxVdec \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
@@ -203,6 +205,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libril_jflte
 
+# Libstlport is required by our ril
+PRODUCT_PACKAGES += \
+    libstlport
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf \
@@ -213,9 +219,10 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# USB
+# Device specific applications
 PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
+    SamsungServiceMode \
+    STweaks
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -244,7 +251,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.text_cache_width=2048 \
     ro.opengles.version=196608 \
     ro.sf.lcd_density=480
 
@@ -261,7 +267,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.radio.fill_eons=1 \
     persist.radio.use_se_table_only=1 \
-    ro.telephony.ril.config=newDriverCallU,newDialCode \
     ro.ril.telephony.mqanelements=6
 
 # gps
@@ -295,11 +300,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
-
-# recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cwm.enable_key_repeat=true \
-    ro.cwm.repeatable_keys=114,115
 
 # ril
 PRODUCT_PROPERTY_OVERRIDES += \
