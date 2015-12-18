@@ -7,17 +7,32 @@
   {
     "repository": "AOSP-JF-MM/proprietary_vendor_samsung",
     "target_path": "vendor/samsung",
-    "branch": "jf-unified-6.0"
+    "branch": "jflte-6.0"
+  },
+  {
+    "repository": "AOSP-JF-MM/platform_device_samsung_jfltecdma",
+    "target_path": "device/samsung/jfltecdma",
+    "branch": "aosp-6.0"
+  },
+  {
+    "repository": "AOSP-JF-MM/platform_device_samsung_jfltegsm",
+    "target_path": "device/samsung/jfltegsm",
+    "branch": "aosp-6.0"
+  },
+  {
+    "repository": "AOSP-JF-MM/android_vendor_qcom_opensource_display-frameworks",
+    "target_path": "vendor/qcom/opensource/display-frameworks",
+    "branch": "aosp-6.0-test"
   },
   {
     "repository": "AOSP-JF-MM/android_hardware_samsung",
     "target_path": "hardware/samsung",
-    "branch": "lp5.1"
+    "branch": "aosp-6.0-test"
   },
   {
-    "repository": "SlimRoms/device_samsung_jf-common",
+    "repository": "AOSP-JF-MM/platform_device_samsung_jf-common",
     "target_path": "device/samsung/jf-common",
-    "branch": "aosp-6.0-test"
+    "branch": "aosp-6.0"
   },
   {
     "repository": "AOSP-JF-MM/android_kernel_samsung_jf",
